@@ -1,5 +1,6 @@
 package fr.momozer.m2i.ECF.ecfback.locations;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import fr.momozer.m2i.ECF.ecfback.locataires.Locataire;
 import fr.momozer.m2i.ECF.ecfback.utils.Entity;
 import fr.momozer.m2i.ECF.ecfback.vehicules.Vehicule;
@@ -18,8 +19,9 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Location extends Entity {
 
-
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dateDebut;
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dateFin;
     private Long prixTotal;
 
