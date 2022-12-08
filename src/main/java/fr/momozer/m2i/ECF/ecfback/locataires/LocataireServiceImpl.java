@@ -1,10 +1,8 @@
 package fr.momozer.m2i.ECF.ecfback.locataires;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
-
 import java.util.List;
 
 public class LocataireServiceImpl implements LocataireService {

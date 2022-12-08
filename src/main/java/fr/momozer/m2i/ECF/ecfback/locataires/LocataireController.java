@@ -1,7 +1,5 @@
 package fr.momozer.m2i.ECF.ecfback.locataires;
-
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController

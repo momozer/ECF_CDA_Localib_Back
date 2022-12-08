@@ -1,7 +1,4 @@
 package fr.momozer.m2i.ECF.ecfback.locataires;
-
-import fr.momozer.m2i.ECF.ecfback.locations.LocationService;
-
 import java.util.List;
 
 public interface LocataireService {

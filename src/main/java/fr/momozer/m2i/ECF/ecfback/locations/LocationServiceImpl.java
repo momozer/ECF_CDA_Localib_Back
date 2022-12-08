@@ -1,5 +1,4 @@
 package fr.momozer.m2i.ECF.ecfback.locations;
-import fr.momozer.m2i.ECF.ecfback.locataires.Locataire;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
