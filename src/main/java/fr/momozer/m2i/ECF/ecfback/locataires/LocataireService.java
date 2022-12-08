@@ -31,10 +31,34 @@ public interface LocataireService {
      */
     void deleteById(String id);
 
-
+    /**
+     * Affiche un locataire en focntion de son prenom renseigné par l'utilisateur
+     * @param prenom du locataire que l'utilisateur cherche
+     * @return le locataire recherché par l'utilisateur
+     */
     List<Locataire> findByPrenom(String prenom);
+    /**
+     * Affiche un locataire en focntion de son nom renseigné par l'utilisateur
+     * @param nom du locataire que l'utilisateur cherche
+     * @return le locataire recherché par l'utilisateur
+     */
     List<Locataire> findByNom(String nom);
+    /**
+     * Affiche un locataire en focntion de son dateNaissance renseignée par l'utilisateur
+     * @param dateNaissance du locataire que l'utilisateur cherche
+     * @return le locataire recherché par l'utilisateur
+     */
     List<Locataire> findBydateNaissance(String dateNaissance);
+    /**
+     * Affiche un locataire en focntion de son mail renseigné par l'utilisateur
+     * @param mail du locataire que l'utilisateur cherche
+     * @return le locataire recherché par l'utilisateur
+     */
     List<Locataire> findByMail(String mail);
+    /**
+     * Affiche un locataire en focntion de son tel renseigné par l'utilisateur
+     * @param tel du locataire que l'utilisateur cherche
+     * @return le locataire recherché par l'utilisateur
+     */
     List<Locataire> findByTel(String tel);
 }
