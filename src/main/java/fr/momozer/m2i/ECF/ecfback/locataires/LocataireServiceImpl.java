@@ -35,6 +35,7 @@ public class LocataireServiceImpl implements LocataireService {
 
     @Override
     public void deleteById(String id) {
+        logger.info("Suppression d'un locataire à partir de son id : " + id);
         locataireRepository.deleteById(id);
     }
 

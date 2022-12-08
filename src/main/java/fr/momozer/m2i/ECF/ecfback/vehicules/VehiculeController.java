@@ -22,11 +22,11 @@ public class VehiculeController {
         return vehiculeService.save(entity);
     }
     @GetMapping("{id}")
-    public Vehicule findById(@PathVariable Integer id) {
+    public Vehicule findById(@PathVariable String id) {
         return vehiculeService.findById(id);
     }
     @DeleteMapping("{id}")
-    public void deleteById(@PathVariable Integer id) {
+    public void deleteById(@PathVariable String id) {
         vehiculeService.deleteById(id);
     }
     @GetMapping("/etat/{etat}")

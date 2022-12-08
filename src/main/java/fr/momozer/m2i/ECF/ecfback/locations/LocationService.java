@@ -30,7 +30,7 @@ public interface LocationService  {
      * Supprime la location en fonction de son id
      * @param id de la location
      */
-    void deleteById(Integer id);
+    void deleteById(String id);
 
     /**
      * Affiche la location en fonction de sa date de début

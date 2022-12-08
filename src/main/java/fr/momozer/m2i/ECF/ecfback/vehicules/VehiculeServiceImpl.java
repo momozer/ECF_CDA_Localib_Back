@@ -27,50 +27,58 @@ public class VehiculeServiceImpl implements VehiculeService{
     }
 
     @Override
-    public Vehicule findById(Integer id) {
-        return vehiculeRepository.findById(String.valueOf(id)).orElseThrow(() ->{
+    public Vehicule findById(String id) {
+        return vehiculeRepository.findById(id).orElseThrow(() ->{
             logger.warn("findByIdInvalide: "+ id);
             return  new ResponseStatusException(HttpStatus.NOT_FOUND);
         });
     }
 
     @Override
-    public void deleteById(Integer id) {
-        vehiculeRepository.deleteById(String.valueOf(id));
+    public void deleteById(String id) {
+        logger.info("Suppression d'un vehicule à partir de son id : " + id);
+        vehiculeRepository.deleteById(id);
     }
 
     @Override
     public List<Vehicule> findByEtat(Etat etat) {
+        logger.info("Recherche d'un vehicule à partir de son etat : " + etat);
         return vehiculeRepository.findByEtat(etat);
     }
 
     @Override
     public List<Vehicule> findByImmatriculation(String immatriculation) {
+        logger.info("Recherche d'un vehicule à partir de son immatriculation : " + immatriculation);
         return vehiculeRepository.findByImmatriculation(immatriculation);
     }
 
     @Override
     public List<Vehicule> findByMarque(String marque) {
+        logger.info("Recherche d'un vehicule à partir de son marque : " + marque);
         return vehiculeRepository.findByMarque(marque);
     }
 
     @Override
     public List<Vehicule> findByModele(String modele) {
+        logger.info("Recherche d'un vehicule à partir de son modele : " + modele);
         return vehiculeRepository.findByModele(modele);
     }
 
     @Override
     public List<Vehicule> findByPrix(Integer prix) {
+        logger.info("Recherche d'un vehicule à partir de son prix : " + prix);
         return vehiculeRepository.findByPrix(prix);
     }
 
     @Override
     public List<Vehicule> findByStatut(String statut) {
+        logger.info("Recherche d'un vehicule à partir de son statut : " + statut);
         return vehiculeRepository.findByStatut(statut);
     }
 
     @Override
     public List<Vehicule> findByType(Type type) {
+        logger.info("Recherche d'un vehicule à partir de son type : " + type);
         return vehiculeRepository.findByType(type);
     }
 }

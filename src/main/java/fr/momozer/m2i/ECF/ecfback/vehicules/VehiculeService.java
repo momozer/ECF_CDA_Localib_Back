@@ -24,13 +24,13 @@ public interface VehiculeService {
      * @param id du vehicule
      * @return le véhicule en fonction de son id
      */
-    Vehicule findById(Integer id);
+    Vehicule findById(String id);
 
     /**
      * Supprime le vehicule en fonction de son  id
      * @param id du vehicule à supprimer
      */
-    void deleteById(Integer id);
+    void deleteById(String id);
 
     /**
      * Affiche le ou les vehicules en fonction de son etat

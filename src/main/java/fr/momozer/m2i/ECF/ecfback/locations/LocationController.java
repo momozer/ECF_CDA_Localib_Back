@@ -29,7 +29,7 @@ public class LocationController {
         return locationService.findById(id);
     }
     @DeleteMapping("{id}")
-    public void deleteById(@PathVariable Integer id) {
+    public void deleteById(@PathVariable String id) {
         locationService.deleteById(id);
     }
 

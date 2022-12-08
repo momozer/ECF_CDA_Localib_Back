@@ -36,8 +36,9 @@ public class LocationServiceImpl implements LocationService{
     }
 
     @Override
-    public void deleteById(Integer id) {
-        locationRepository.deleteById(String.valueOf(id));
+    public void deleteById(String id) {
+        logger.info("Suppression d'une location à partir de son id : " + id);
+        locationRepository.deleteById(id);
     }
 
     @Override
