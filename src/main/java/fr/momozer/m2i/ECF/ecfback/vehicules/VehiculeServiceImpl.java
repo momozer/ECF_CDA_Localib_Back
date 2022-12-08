@@ -18,16 +18,20 @@ public class VehiculeServiceImpl implements VehiculeService{
 
     @Override
     public List<Vehicule> findAll() {
+        logger.info("Affiche l'ensemble des vehicules enregistrés dejà");
         return vehiculeRepository.findAll();
     }
 
     @Override
     public Vehicule save(Vehicule entity) {
+        logger.info("Sauvegarde, ajout d'un nouveau véhicule appelé entity en prenant les informations" +
+                "renseignées par le client dans le body : " + entity);
         return vehiculeRepository.save(entity);
     }
 
     @Override
     public Vehicule findById(String id) {
+        logger.info("Recherche d'un vehicule à partir de son id : " + id);
         return vehiculeRepository.findById(id).orElseThrow(() ->{
             logger.warn("findByIdInvalide: "+ id);
             return  new ResponseStatusException(HttpStatus.NOT_FOUND);
