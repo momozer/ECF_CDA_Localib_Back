@@ -34,7 +34,32 @@ public class LocataireServiceImpl implements LocataireService {
     }
 
     @Override
-    public void deleteById(Integer id) {
-        locataireRepository.deleteById(String.valueOf(id));
+    public void deleteById(String id) {
+        locataireRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Locataire> findByPrenom(String prenom) {
+        return locataireRepository.findByPrenom(prenom);
+    }
+
+    @Override
+    public List<Locataire> findByNom(String nom) {
+        return locataireRepository.findByNom(nom);
+    }
+
+    @Override
+    public List<Locataire> findBydateNaissance(String dateNaissance) {
+        return locataireRepository.findBydateNaissance(dateNaissance);
+    }
+
+    @Override
+    public List<Locataire> findByMail(String mail) {
+        return locataireRepository.findByMail(mail);
+    }
+
+    @Override
+    public List<Locataire> findByTel(String tel) {
+        return locataireRepository.findByTel(tel);
     }
 }

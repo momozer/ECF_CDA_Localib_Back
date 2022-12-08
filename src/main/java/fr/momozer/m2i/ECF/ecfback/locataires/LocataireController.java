@@ -27,7 +27,28 @@ public class LocataireController {
         return locataireService.findById(id);
     }
     @DeleteMapping("{id}")
-    public void deleteById(@PathVariable Integer id) {
+    public void deleteById(@PathVariable String id) {
         locataireService.deleteById(id);
+    }
+
+    @GetMapping("/prenom/{prenom}")
+    public List<Locataire> findByPrenom(@PathVariable String prenom) {
+        return locataireService.findByPrenom(prenom);
+    }
+    @GetMapping("/nom/{nom}")
+    public List<Locataire> findByNom(@PathVariable String nom) {
+        return locataireService.findByNom(nom);
+    }
+    @GetMapping("/dateNaissance/{dateNaissance}")
+    public List<Locataire> findBydateNaissance(@PathVariable String dateNaissance) {
+        return locataireService.findBydateNaissance(dateNaissance);
+    }
+    @GetMapping("/mail/{mail}")
+    public List<Locataire> findByMail(@PathVariable String mail) {
+        return locataireService.findByMail(mail);
+    }
+    @GetMapping("/tel/{tel}")
+    public List<Locataire> findByTel(@PathVariable String tel) {
+        return locataireService.findByTel(tel);
     }
 }

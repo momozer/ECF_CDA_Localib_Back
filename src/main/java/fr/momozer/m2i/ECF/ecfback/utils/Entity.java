@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 @Data
 public class Entity {
     @Id
-    private Integer id;
+    private String id;
     protected LocalDateTime dateCreation = LocalDateTime.now();
     protected LocalDateTime dateModification = LocalDateTime.now();
 }

@@ -29,5 +29,12 @@ public interface LocataireService {
      * Supprime le locataire en fonction de son id
      * @param id du locataire à supprimer renseigné par l'utilisateur
      */
-    void deleteById(Integer id);
+    void deleteById(String id);
+
+
+    List<Locataire> findByPrenom(String prenom);
+    List<Locataire> findByNom(String nom);
+    List<Locataire> findBydateNaissance(String dateNaissance);
+    List<Locataire> findByMail(String mail);
+    List<Locataire> findByTel(String tel);
 }

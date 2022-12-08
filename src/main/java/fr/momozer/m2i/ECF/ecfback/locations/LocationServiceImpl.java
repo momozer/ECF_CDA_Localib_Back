@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public class LocationServiceImpl implements LocationService{
@@ -27,8 +28,8 @@ public class LocationServiceImpl implements LocationService{
     }
 
     @Override
-    public Location findById(Integer id) {
-        return locationRepository.findById(String.valueOf(id)).orElseThrow(() ->{
+    public Location findById(String id) {
+        return locationRepository.findById(id).orElseThrow(() ->{
             logger.warn("findByIdInvalide: "+ id);
             return  new ResponseStatusException(HttpStatus.NOT_FOUND);
         });
@@ -37,5 +38,15 @@ public class LocationServiceImpl implements LocationService{
     @Override
     public void deleteById(Integer id) {
         locationRepository.deleteById(String.valueOf(id));
+    }
+
+    @Override
+    public List<Location> findByDateDebut(LocalDate dateDebut) {
+        return locationRepository.findByDateDebut(dateDebut);
+    }
+
+    @Override
+    public List<Location> findByDateFin(LocalDate dateFin) {
+        return locationRepository.findByDateFin(dateFin);
     }
 }
