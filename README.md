@@ -3,7 +3,9 @@
 ## Description:
 
 Ce projet a pour but de gérer les locataires (clients), le parc de véhicules et les locations de véhicules d'une 
-entreprise de location de véhicule. Cette application de gestion commerciale est à l'usage unique des employés de l'entreprise Localib.
+entreprise de location de véhicule. Cette application de gestion commerciale est à l'usage unique des employés 
+de l'entreprise ***Localib***.
+Ce projet est la partie Back-end de l'ensmeble du projet ***Localib***
 
 ## Prérequis:
 * Java 11+
