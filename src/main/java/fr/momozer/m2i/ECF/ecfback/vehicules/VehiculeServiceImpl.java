@@ -18,7 +18,7 @@ public class VehiculeServiceImpl implements VehiculeService{
 
     @Override
     public List<Vehicule> findAll() {
-        logger.info("Affiche l'ensemble des vehicules enregistrés dejà");
+        logger.info("Affiche l'ensemble des vehicules existants");
         return vehiculeRepository.findAll();
     }
 
