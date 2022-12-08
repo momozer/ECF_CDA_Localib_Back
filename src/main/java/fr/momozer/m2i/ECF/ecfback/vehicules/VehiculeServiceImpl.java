@@ -1,4 +1,5 @@
 package fr.momozer.m2i.ECF.ecfback.vehicules;
+import fr.momozer.m2i.ECF.ecfback.locataires.Locataire;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -31,6 +32,61 @@ public class VehiculeServiceImpl implements VehiculeService{
             logger.warn("findByIdInvalide: "+ id);
             return  new ResponseStatusException(HttpStatus.NOT_FOUND);
         });
+    }
+    @Override
+    public Vehicule modifierVehicule(String id, Vehicule entity) {
+
+            Vehicule vehicule = this.findById(id);
+
+            if (entity.getEtat() == null) {
+                vehicule.setEtat(vehicule.getEtat());
+            } else {
+                vehicule.setEtat(entity.getEtat());
+            }
+
+            if (entity.getImmatriculation() == null) {
+                vehicule.setImmatriculation(vehicule.getImmatriculation());
+            } else {
+                vehicule.setImmatriculation(entity.getImmatriculation());
+            }
+
+            if (entity.getMarque() == null) {
+                vehicule.setMarque(vehicule.getMarque());
+            } else {
+                vehicule.setMarque(entity.getMarque());
+            }
+
+            if (entity.getModele() == null) {
+                vehicule.setModele(vehicule.getModele());
+            } else {
+                vehicule.setModele(entity.getModele());
+            }
+
+            if (entity.getPrix() == null) {
+                vehicule.setPrix(vehicule.getPrix());
+            } else {
+                vehicule.setPrix(entity.getPrix());
+            }
+
+            if (entity.getStatut() == null) {
+                vehicule.setStatut(vehicule.getStatut());
+            } else {
+                vehicule.setStatut(entity.getStatut());
+            }
+
+            if (entity.getType() == null) {
+                vehicule.setType(vehicule.getType());
+            } else {
+                vehicule.setType(entity.getType());
+            }
+
+            if (entity.getPhoto() == null) {
+                vehicule.setPhoto(vehicule.getPhoto());
+            } else {
+                vehicule.setPhoto(entity.getPhoto());
+            }
+
+            return this.save(vehicule);
     }
     @Override
     public void deleteById(String id) {

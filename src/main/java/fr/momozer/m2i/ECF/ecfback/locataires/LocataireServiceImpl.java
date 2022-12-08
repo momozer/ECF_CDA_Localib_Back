@@ -29,9 +29,48 @@ public class LocataireServiceImpl implements LocataireService {
     }
 
     @Override
-    public Locataire findById(Integer id) {
+    public Locataire modifierLocataire(String id, Locataire entity) {
+
+            Locataire locataire = this.findById(id);
+
+            if (entity.getNom() == null) {
+                locataire.setNom(locataire.getNom());
+            } else {
+                locataire.setNom(entity.getNom());
+            }
+
+            if (entity.getPrenom() == null) {
+                locataire.setPrenom(locataire.getPrenom());
+            } else {
+                locataire.setPrenom(entity.getPrenom());
+            }
+
+            if (entity.getTel() == null) {
+                locataire.setTel(locataire.getTel());
+            } else {
+                locataire.setTel(entity.getTel());
+            }
+
+            if (entity.getMail() == null) {
+                locataire.setMail(locataire.getMail());
+            } else {
+                locataire.setMail(entity.getMail());
+            }
+
+            if (entity.getDateNaissance() == null) {
+                locataire.setDateNaissance(locataire.getDateNaissance());
+            } else {
+                locataire.setDateNaissance(entity.getDateNaissance());
+            }
+
+            return this.save(locataire);
+    }
+
+
+    @Override
+    public Locataire findById(String id) {
         logger.info("Recherche d'un locataire à partir de son id : " + id);
-        return locataireRepository.findById(String.valueOf(id)).orElseThrow(() ->{
+        return locataireRepository.findById(id).orElseThrow(() ->{
             logger.warn("findByIdInvalide: "+ id);
             return  new ResponseStatusException(HttpStatus.NOT_FOUND);
         });

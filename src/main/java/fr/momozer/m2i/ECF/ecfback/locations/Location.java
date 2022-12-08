@@ -30,6 +30,43 @@ public class Location extends Entity {
     @DBRef
     private Vehicule vehicule;
 
+    public LocalDate getDateDebut() {
+        return dateDebut;
+    }
 
+    public void setDateDebut(LocalDate dateDebut) {
+        this.dateDebut = dateDebut;
+    }
 
+    public LocalDate getDateFin() {
+        return dateFin;
+    }
+
+    public void setDateFin(LocalDate dateFin) {
+        this.dateFin = dateFin;
+    }
+
+    public Long getPrixTotal() {
+        return prixTotal;
+    }
+
+    public void setPrixTotal(Long prixTotal) {
+        this.prixTotal = prixTotal;
+    }
+
+    public Locataire getLocataire() {
+        return locataire;
+    }
+
+    public void setLocataire(Locataire locataire) {
+        this.locataire = locataire;
+    }
+
+    public Vehicule getVehicule() {
+        return vehicule;
+    }
+
+    public void setVehicule(Vehicule vehicule) {
+        this.vehicule = vehicule;
+    }
 }

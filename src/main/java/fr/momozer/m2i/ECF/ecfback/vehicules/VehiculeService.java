@@ -24,6 +24,14 @@ public interface VehiculeService {
     Vehicule findById(String id);
 
     /**
+     * Modifie le vehicule
+     * @param id du vehicule à modifier
+     * @param entity represente les information renseigné du vehicule à modifier
+     * @return l'entity vehicule modifier
+     */
+    Vehicule modifierVehicule(String id, Vehicule entity);
+
+    /**
      * Supprime le vehicule en fonction de son  id
      * @param id du vehicule à supprimer
      */

@@ -20,11 +20,19 @@ public interface LocataireService {
     Locataire save(Locataire entity);
 
     /**
+     *
+     * @param id du locataire à modifier
+     * @param entity locataire à modifier
+     * @return le locataire (entity) modifier
+     */
+    Locataire modifierLocataire(String id, Locataire entity);
+
+    /**
      * Affiche un locataire en focntion de son id renseigné par l'utilisateur
      * @param id du locataire que l'utilisateur cherche
      * @return le locataire recherché par l'utilisateur
      */
-    Locataire findById(Integer id);
+    Locataire findById(String id);
 
     /**
      * Supprime le locataire en fonction de son id

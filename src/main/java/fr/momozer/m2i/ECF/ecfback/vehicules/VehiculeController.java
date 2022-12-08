@@ -22,6 +22,10 @@ public class VehiculeController {
     public Vehicule findById(@PathVariable String id) {
         return vehiculeService.findById(id);
     }
+    @PatchMapping("{id}")
+    public Vehicule modifierVehicule(@PathVariable String id,@PathVariable Vehicule entity) {
+        return vehiculeService.modifierVehicule(id, entity);
+    }
     @DeleteMapping("{id}")
     public void deleteById(@PathVariable String id) {
         vehiculeService.deleteById(id);

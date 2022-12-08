@@ -1,4 +1,5 @@
 package fr.momozer.m2i.ECF.ecfback.locations;
+import fr.momozer.m2i.ECF.ecfback.locataires.Locataire;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -34,6 +35,43 @@ public class LocationServiceImpl implements LocationService{
             logger.warn("findByIdInvalide: "+ id);
             return  new ResponseStatusException(HttpStatus.NOT_FOUND);
         });
+    }
+
+    @Override
+    public Location modifierById(String id, Location entity) {
+            Location location = this.findById(id);
+
+            if (entity.getLocataire() == null) {
+                location.setLocataire(location.getLocataire());
+            } else {
+                location.setLocataire(entity.getLocataire());
+            }
+
+            if (entity.getVehicule() == null) {
+                location.setVehicule(location.getVehicule());
+            } else {
+                location.setVehicule(entity.getVehicule());
+            }
+
+            if (entity.getDateDebut() == null) {
+                location.setDateDebut(location.getDateDebut());
+            } else {
+                location.setDateDebut(entity.getDateDebut());
+            }
+
+            if (entity.getDateFin() == null) {
+                location.setDateFin(location.getDateFin());
+            } else {
+                location.setDateFin(entity.getDateFin());
+            }
+
+            if (entity.getPrixTotal() == null) {
+                location.setPrixTotal(location.getPrixTotal());
+            } else {
+                location.setPrixTotal(entity.getPrixTotal());
+            }
+
+            return this.save(location);
     }
 
     @Override

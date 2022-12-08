@@ -24,6 +24,10 @@ public class LocationController {
     public Location findById(@PathVariable String id) {
         return locationService.findById(id);
     }
+    @PatchMapping("{id}")
+    public Location modifierById(String id, Location entity) {
+        return locationService.modifierById(id, entity);
+    }
     @DeleteMapping("{id}")
     public void deleteById(@PathVariable String id) {
         locationService.deleteById(id);

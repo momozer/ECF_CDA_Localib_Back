@@ -25,6 +25,14 @@ public interface LocationService  {
     Location findById(String id);
 
     /**
+     * Modifie la location
+     * @param id de la location
+     * @param entity location body
+     * @return modification de la location
+     */
+    Location modifierById(String id, Location entity);
+
+    /**
      * Supprime la location en fonction de son id
      * @param id de la location
      */

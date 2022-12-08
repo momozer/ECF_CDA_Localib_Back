@@ -23,14 +23,17 @@ public class LocataireController {
         return locataireService.save(entity);
     }
     @GetMapping("{id}")
-    public Locataire findById(@PathVariable Integer id) {
+    public Locataire findById(@PathVariable String id) {
         return locataireService.findById(id);
     }
     @DeleteMapping("{id}")
     public void deleteById(@PathVariable String id) {
         locataireService.deleteById(id);
     }
-
+    @PatchMapping("{id}")
+    public Locataire modifierLocataire(@PathVariable String id, @PathVariable Locataire entity) {
+        return locataireService.modifierLocataire(id, entity);
+    }
     @GetMapping("/prenom/{prenom}")
     public List<Locataire> findByPrenom(@PathVariable String prenom) {
         return locataireService.findByPrenom(prenom);
