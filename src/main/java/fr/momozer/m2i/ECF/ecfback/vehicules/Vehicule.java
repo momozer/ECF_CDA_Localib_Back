@@ -1,5 +1,6 @@
 package fr.momozer.m2i.ECF.ecfback.vehicules;
 
+import fr.momozer.m2i.ECF.ecfback.utils.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,9 +11,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 @AllArgsConstructor
 @NoArgsConstructor
-public class Vehicule {
-    @Id
-    private Integer id;
+public class Vehicule extends Entity {
+
     private Etat etat;
     private String immatriculation;
     private String marque;

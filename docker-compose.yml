@@ -6,6 +6,6 @@ services:
   mongo-express:
     image: mongo-express
     ports:
-      - 8080:8080
+      - 8080:8085
     depends_on:
       - mongo

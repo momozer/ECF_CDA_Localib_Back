@@ -1,6 +1,7 @@
 package fr.momozer.m2i.ECF.ecfback.locations;
 
 import fr.momozer.m2i.ECF.ecfback.locataires.Locataire;
+import fr.momozer.m2i.ECF.ecfback.utils.Entity;
 import fr.momozer.m2i.ECF.ecfback.vehicules.Vehicule;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,10 +16,9 @@ import java.time.LocalDate;
 @Document
 @NoArgsConstructor
 @AllArgsConstructor
-public class Location {
+public class Location extends Entity {
 
-    @Id
-    private Integer id;
+
     private LocalDate dateDebut;
     private LocalDate dateFin;
     private Long prixTotal;
