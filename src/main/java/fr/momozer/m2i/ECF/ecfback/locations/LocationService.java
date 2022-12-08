@@ -1,11 +1,9 @@
 package fr.momozer.m2i.ECF.ecfback.locations;
-
-import fr.momozer.m2i.ECF.ecfback.locataires.Locataire;
-
 import java.time.LocalDate;
 import java.util.List;
 
 public interface LocationService  {
+
     /**
      * Affiche l'ensemble des locations
      * @return toutes les locations

@@ -5,7 +5,6 @@ import fr.momozer.m2i.ECF.ecfback.utils.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
@@ -15,12 +14,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Locataire extends Entity {
 
 
-    private String prenom;
-    private String nom;
+    private String prenom, nom;
+
     @JsonFormat(pattern = "dd/MM/yyyy")
     private String dateNaissance;
-    private String mail;
-    private String tel;
+
+    private String mail, tel;
+
 
 
 }

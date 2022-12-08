@@ -1,7 +1,5 @@
 package fr.momozer.m2i.ECF.ecfback.vehicules;
-
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -9,7 +7,6 @@ import java.util.List;
 @RequestMapping("/vehicules")
 public class VehiculeController {
     private final VehiculeService vehiculeService;
-
     public VehiculeController(VehiculeService vehiculeService) {
         this.vehiculeService = vehiculeService;
     }

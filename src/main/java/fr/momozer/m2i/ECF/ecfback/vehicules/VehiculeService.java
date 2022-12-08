@@ -1,11 +1,8 @@
 package fr.momozer.m2i.ECF.ecfback.vehicules;
-
-import fr.momozer.m2i.ECF.ecfback.locations.Location;
-
-import java.time.LocalDate;
 import java.util.List;
 
 public interface VehiculeService {
+
     /**
      * Affiche l'ensemble des vehicules
      * @return l'ensemble des vehicules

@@ -1,5 +1,4 @@
 package fr.momozer.m2i.ECF.ecfback.vehicules;
-
 import fr.momozer.m2i.ECF.ecfback.utils.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,11 +13,12 @@ public class Vehicule extends Entity {
 
     private Etat etat;
     private String immatriculation;
-    private String marque;
-    private String modele;
+    private String marque, modele;
     private Integer prix;
     private String statut;
     private Type type;
     private String photo;
+
+
 
 }

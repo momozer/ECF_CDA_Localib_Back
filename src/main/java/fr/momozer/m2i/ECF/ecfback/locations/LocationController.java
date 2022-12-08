@@ -1,9 +1,5 @@
 package fr.momozer.m2i.ECF.ecfback.locations;
-
-import fr.momozer.m2i.ECF.ecfback.locataires.Locataire;
-import org.springframework.cglib.core.Local;
 import org.springframework.web.bind.annotation.*;
-
 import java.time.LocalDate;
 import java.util.List;
 
@@ -12,10 +8,10 @@ import java.util.List;
 @RequestMapping("/locations")
 public class LocationController {
     private final LocationService locationService;
-
     public LocationController(LocationService locationService) {
         this.locationService = locationService;
     }
+
     @GetMapping("")
     public List<Location> findAll() {
         return locationService.findAll();
@@ -32,7 +28,6 @@ public class LocationController {
     public void deleteById(@PathVariable String id) {
         locationService.deleteById(id);
     }
-
     @GetMapping("/dateDebut/{dateDebut}")
     public List<Location> findByDateDebut(@PathVariable LocalDate dateDebut) {
         return locationService.findByDateDebut(dateDebut);
