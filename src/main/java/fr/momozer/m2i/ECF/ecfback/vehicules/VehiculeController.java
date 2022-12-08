@@ -29,4 +29,32 @@ public class VehiculeController {
     public void deleteById(@PathVariable Integer id) {
         vehiculeService.deleteById(id);
     }
+    @GetMapping("/etat/{etat}")
+    public List<Vehicule> findByEtat(@PathVariable Etat etat) {
+        return vehiculeService.findByEtat(etat);
+    }
+    @GetMapping("/immatriculation/{immatriculation}")
+    public List<Vehicule> findByImmatriculation(@PathVariable String immatriculation) {
+        return vehiculeService.findByImmatriculation(immatriculation);
+    }
+    @GetMapping("/marque/{marque}")
+    public List<Vehicule> findByMarque(@PathVariable String marque) {
+        return vehiculeService.findByMarque(marque);
+    }
+    @GetMapping("/modele/{modele}")
+    public List<Vehicule> findByModele(@PathVariable String modele) {
+        return vehiculeService.findByModele(modele);
+    }
+    @GetMapping("/prix/{prix}")
+    public List<Vehicule> findByPrix(@PathVariable Integer prix) {
+        return vehiculeService.findByPrix(prix);
+    }
+    @GetMapping("/statut/{statut}")
+    public List<Vehicule> findByStatut(@PathVariable String statut) {
+        return vehiculeService.findByStatut(statut);
+    }
+    @GetMapping("/type/{type}")
+    public List<Vehicule> findByType(@PathVariable Type type) {
+        return vehiculeService.findByType(type);
+    }
 }

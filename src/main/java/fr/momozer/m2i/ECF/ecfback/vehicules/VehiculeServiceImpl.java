@@ -38,4 +38,39 @@ public class VehiculeServiceImpl implements VehiculeService{
     public void deleteById(Integer id) {
         vehiculeRepository.deleteById(String.valueOf(id));
     }
+
+    @Override
+    public List<Vehicule> findByEtat(Etat etat) {
+        return vehiculeRepository.findByEtat(etat);
+    }
+
+    @Override
+    public List<Vehicule> findByImmatriculation(String immatriculation) {
+        return vehiculeRepository.findByImmatriculation(immatriculation);
+    }
+
+    @Override
+    public List<Vehicule> findByMarque(String marque) {
+        return vehiculeRepository.findByMarque(marque);
+    }
+
+    @Override
+    public List<Vehicule> findByModele(String modele) {
+        return vehiculeRepository.findByModele(modele);
+    }
+
+    @Override
+    public List<Vehicule> findByPrix(Integer prix) {
+        return vehiculeRepository.findByPrix(prix);
+    }
+
+    @Override
+    public List<Vehicule> findByStatut(String statut) {
+        return vehiculeRepository.findByStatut(statut);
+    }
+
+    @Override
+    public List<Vehicule> findByType(Type type) {
+        return vehiculeRepository.findByType(type);
+    }
 }
