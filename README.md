@@ -15,9 +15,17 @@ entreprise de location de véhicule. Cette application de gestion commerciale es
 
 ### Base de données
 Pour lancer la base de donnée, il faut se placer dans le dossier docker et lancer la commande suivante:
+
 ```bash
 docker-compose up -d
 ```
 ### Lancement de l'application
+
+Si la mise à jour des images est nécessaire, lancer la commande suivante :
+
+```bash
+docker-compose up -d --build
+```
+
 Pour lancer l'application il suffit d'ouvrir ce projet dans un IDE comme IntelliJ et de lancer le main en appuyant sur 
 le bouton play.
