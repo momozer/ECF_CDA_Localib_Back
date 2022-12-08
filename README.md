@@ -19,4 +19,5 @@ Pour lancer la base de donnée, il faut se placer dans le dossier docker et lanc
 docker-compose up -d
 ```
 ### Lancement de l'application
-Pour lancer l'application
+Pour lancer l'application il suffit d'ouvrir ce projet dans un IDE comme IntelliJ et de lancer le main en appuyant sur 
+le bouton play.
